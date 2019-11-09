@@ -208,4 +208,6 @@ public class UserResource {
             .stream(userSearchRepository.search(queryStringQuery(query)).spliterator(), false)
             .collect(Collectors.toList());
     }
+
+    // rewer
 }
