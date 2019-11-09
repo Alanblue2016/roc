@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "rock",
+      "nativeLanguage": "zh-cn"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "monolith",
+    "baseName": "roc",
+    "packageName": "rock",
+    "packageFolder": "rock",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YTM2ZDkwN2IyYTYxOWQ4ZWUzZjQyNjRlYTQ1ZjdkMWNlMWNmMzU3NmJiMDdiYzJlMzUwYTkxNzhhNzMxNzVjMzRhNWM1NjY3ODM4OTBlNDkyNzIxNGYyN2I3NzhlOTBjNjM4OTI4N2Q0YTk1MjI0ZWJlMGFmYmUwZTNjYTQzNzg=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "zh-cn",
+    "languages": ["zh-cn", "en"],
+    "blueprints": []
+  }
+}
