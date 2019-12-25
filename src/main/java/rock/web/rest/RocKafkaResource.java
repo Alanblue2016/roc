@@ -25,4 +25,8 @@ public class RocKafkaResource {
         log.debug("REST request to send to Kafka topic the message : {}", message);
         this.kafkaProducer.send(message);
     }
+
+    public void init(){
+
+    }
 }
