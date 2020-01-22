@@ -13,6 +13,16 @@ public class Cat extends Animal {
 
     String sex;
 
+    Boolean cute;
+
+    public Boolean getCute() {
+        return cute;
+    }
+
+    public void setCute(Boolean cute) {
+        this.cute = cute;
+    }
+
     public String getName() {
         return name;
     }
