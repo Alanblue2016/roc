@@ -1,4 +1,9 @@
+import net.bytebuddy.implementation.bind.annotation.Super;
+import org.springframework.data.geo.Circle;
 import rock.tool.DateUtils;
+
+import java.security.PublicKey;
+import java.sql.SQLOutput;
 
 public class te {
     public static void main(String[] args) {
@@ -174,9 +179,42 @@ public class te {
 //        String [] a= new String[5];
 //        System.out.println(a.length);
 
-        String  date = DateUtils.getPastDate(1);
-        System.out.println(date);
+//        String  date = DateUtils.getPastDate(1);
+//        System.out.println(date);
 //        LocalDate localDate = DateUtils.date2LocalDate(date);
 //        System.out.println(localDate.toString());
+
+        class Sharp {
+            private int a;
+
+            public int getA() {
+                return a;
+            }
+
+            public void setA(int a) {
+                this.a = a;
+            }
+
+            void drew() {
+
+            }
+
+            void erase() {
+
+            }
+
+        }
+        class Circle extends Sharp {
+            Circle circle = new Circle();
+
+        }
+
+    }
+
+    private static <Sharp> void doSomething(Sharp Sharp) {
+
+        Circle circle = new Circle();
+        doSomething(circle);
+        System.out.println("234234");
     }
 }
