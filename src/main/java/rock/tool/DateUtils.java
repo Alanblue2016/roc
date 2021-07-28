@@ -201,6 +201,15 @@ public class DateUtils {
         return gc.get(2) + 1;
     }
 
+    public static int getWeekth() {
+        GregorianCalendar g = new GregorianCalendar();
+
+        g.setTime(new Date());
+        //获得周数
+        return g.get(Calendar.WEEK_OF_YEAR);
+
+    }
+
     //两个日期相减得到的天数
     public static int getDiffDays(Date beginDate, Date endDate) {
 
@@ -390,4 +399,75 @@ public class DateUtils {
         return result;
     }
 
+
+    /**
+     * 获取一年的日期-全量集合使用 2008年计算全年共366天
+     *
+     * @throws ParseException
+     */
+    public static List<String> getYearDate() throws ParseException {
+        List<String> allDate = new ArrayList<>();
+        String dateStart = "2008-01-01";
+        String dateEnd = "2008-12-31";
+        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+        //start
+        long startTime = date.parse(dateStart).getTime();
+        //end
+        long endTime = date.parse(dateEnd).getTime();
+        long day = 1000 * 60 * 60 * 24;
+        for (long i = startTime; i <= endTime; i += day) {
+            String format = date.format(new Date(i));
+            allDate.add(format);
+        }
+        return allDate;
+    }
+
+    /**
+     * 获取一年的日期
+     *
+     * @throws ParseException
+     */
+    public static List<String> getYearDateByStartAndEnd(String begin, String end) throws ParseException {
+        List<String> allDate = new ArrayList<>();
+        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+        //start
+        long startTime = date.parse(begin).getTime();
+        //end
+        long endTime = date.parse(end).getTime();
+        long day = 1000 * 60 * 60 * 24;
+        for (long i = startTime; i <= endTime; i += day) {
+            String format = date.format(new Date(i));
+            allDate.add(format);
+        }
+        return allDate;
+    }
+
+
+    /**
+     * 获取一年的日期-  （1/1，2/2，10/1）
+     *
+     * @param begin 2008-01-01
+     * @param end   2008-12-31
+     * @throws ParseException
+     */
+    public static List<String> getYearDateShort(String begin, String end) throws ParseException {
+        List<String> resList = new ArrayList<>();
+        List<String> allDate = getYearDateByStartAndEnd(begin, end);
+        for (int i = 0; i < allDate.size(); i++) {
+            String index = allDate.get(i);
+            String substring = index.substring(5, index.length());
+            String[] split = substring.split("-");
+            String yue = split[0];
+            String ri = split[1];
+            if (yue.substring(0, 1).equals("0")) {
+                yue = yue.substring(1, yue.length());
+            }
+            if (ri.substring(0, 1).equals("0")) {
+                ri = ri.substring(1, ri.length());
+            }
+            String resStr = yue + "/" + ri;
+            resList.add(resStr);
+        }
+        return resList;
+    }
 }
