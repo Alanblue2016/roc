@@ -78,6 +78,10 @@ spring:
         size: 1
   thymeleaf:
     mode: HTML
+  redis:
+    database: 2
+    host: localhost
+    port: 6379
 
 server:
   port: 10344
