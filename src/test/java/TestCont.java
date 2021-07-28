@@ -16,6 +16,7 @@ public class TestCont {
         if (e.equals(Constant.PrizeType.XIE_XIE_CAN_YU.getValue())) {
             System.out.println("2342");
         } else {
+
             System.out.println("1111");
 
         }
