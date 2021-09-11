@@ -27,6 +27,10 @@ public class TimeTool {
         return dateTime.format(shortFormatterStr);
     }
 
+    public static String dateToString(Date dateTime) {
+        return dateTime.toString();
+    }
+
     public static String dateToStringDefault(LocalDateTime dateTime) {
         return dateTime.format(formatter);
     }

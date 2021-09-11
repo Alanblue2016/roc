@@ -8,16 +8,16 @@ import java.util.*;
 
 @RunWith(SpringRunner.class)
 @Component
-public class TestRandom {
+public class ChouIJiang {
 
     /**
      * 根据概率获取奖品的测试类
      */
     public static void main(String[] args) {
-        TestRandom tr = new TestRandom();
+        ChouIJiang tr = new ChouIJiang();
 
         long begin1 = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             tr.getGumBySet();
         }
         System.out.println("set使用时间：" + (System.currentTimeMillis() - begin1));
@@ -35,6 +35,7 @@ public class TestRandom {
             if (random < prizeRate) {
                 System.out.println("奖品为：" + gem.getName()
                     + " 概率：" + gem.getPriority()
+                    + " 随机数nextInt：" + nextInt
                     + " 随机数random：" + random
                     + " 概率基数prizeRate：" + prizeRate);
                 break;
@@ -48,12 +49,13 @@ public class TestRandom {
      */
     Set<Gem> initSetGems() {
         Set<Gem> gums = new HashSet<Gem>();
-        gums.add(new Gem("A", 0.01));
-        gums.add(new Gem("M", 0.04));
-        gums.add(new Gem("B", 0.05));
-        gums.add(new Gem("C", 0.00));
-        gums.add(new Gem("D", 0.00));
-        gums.add(new Gem("E", 0.00));
+        gums.add(new Gem("A", 1.00));
+        gums.add(new Gem("m", 50.00));
+//        gums.add(new Gem("M", 90.00));
+//        gums.add(new Gem("B", 0.30));
+//        gums.add(new Gem("C", 0.00));
+//        gums.add(new Gem("D", 0.00));
+        gums.add(new Gem("E", 4.00));
         return gums;
     }
 

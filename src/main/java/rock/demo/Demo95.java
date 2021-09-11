@@ -100,10 +100,82 @@ public class Demo95 {
 //        System.out.println(L);
 
 
-        String stockId =" 34343,2323,2 23,";
+//        String stockId =" 34343,2323,2 23,";
+//
+//        String[] split = stockId.trim().split(",");
+//        System.out.println(split.length);
 
-        String[] split = stockId.trim().split(",");
-        System.out.println(split.length);
+//        List<SendCouponParams>  params = new ArrayList<>();
+//        SendCouponParams params1 = new SendCouponParams();
+//        params1.setCoupon_code("234223");
+//        params1.setCreate_coupon_merchant("sdsdddd");
+//        params1.setOut_request_no("234234234");
+//        params1.setCustomize_send_time("asdfsadf");
+//        params.add(params1);
+//
+//
+//        SendCouponVo sendCouponVo = new SendCouponVo();
+//        sendCouponVo.setBindsendcoupon("werwer");
+//        sendCouponVo.setSend_coupon_merchant("sssad法师大法师地方");
+//        sendCouponVo.setSend_coupon_params(params);
+//        sendCouponVo.setBindsendcoupon("werwer");
+//
+//        System.out.println(JsonMapper.defaultMapper().toJson(sendCouponVo));
+
+
+//        String beginDate = "2021-09-01";
+//        String endDate = "2021-09-09";
+//        List<String> skipDays = new ArrayList<>();
+//
+//        skipDays.add("2021-09-02");
+//        skipDays.add("2021-09-03");
+//
+//
+//        List<String> days = DateUtils.getDays(beginDate, endDate);
+//        List<String> removeDays = new ArrayList<>();
+//
+//        for (int i = 0; i < days.size(); i++) {
+//            for (int n = 0; n < skipDays.size(); n++) {
+//                if (StringUtils.equals(days.get(i), skipDays.get(n))) {
+//                    //移除要跳过的天数
+//                    removeDays.add(days.get(i));
+//                 }
+//            }
+//            if (DateUtils.isWeekend(days.get(i))) {
+//                removeDays.add(days.get(i));
+//            }
+//
+//        }
+//
+//
+//        days.removeAll(removeDays);
+//
+//
+//        for (int i = 0; i < days.size(); i++) {
+//            System.out.println(days.get(i));
+//        }
+
+        String tableName = "bus";
+        Integer times = 1;
+        String aId = "1442324";
+
+        Map map = Maps.newHashMap();
+        map.put ("id",234234);
+        map.put ("lineId",111111);
+
+//        SaveLineDataVo saveLineDataVo = new SaveLineDataVo();
+//        saveLineDataVo.setAId(aId);
+//        saveLineDataVo.setJson(json);
+//        saveLineDataVo.setTimes(times);
+//        saveLineDataVo.setTableName(tableName);
+        StringBuilder sb = new StringBuilder();
+        sb.append(tableName);
+        sb.append("#");
+        sb.append(aId);
+        sb.append("#");
+        sb.append(JsonMapper.defaultMapper().toJson(map));
+        String value = sb.toString();
+        System.out.println(value);
 
 
     }
